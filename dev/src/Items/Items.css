@@ -1,0 +1,31 @@
+.Item img {
+   max-width: 100%;
+   max-height: 70%;
+    
+}
+.Item{
+    margin: 20px;
+    width: 500px;
+    height: 500px;
+    display:inline-block;
+    position:relative;
+    background-color: rgb(46, 49, 53);
+    border-radius: 10px;
+}
+
+#text{
+    display: flex;
+    position: relative;
+    bottom: 10px;
+}
+
+.ImgSlot{
+    width: 400px;
+    height: 400px;
+    margin: 10px auto 20px;
+    display: block;
+}
+
+.ItemNameSlot{
+    align-items:center;
+}
