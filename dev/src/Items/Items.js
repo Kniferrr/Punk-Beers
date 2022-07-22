@@ -17,7 +17,7 @@ const CreateItems = (Beers) =>{
         return(
           <li className='Item' key={item.id}>
             
-      <center><span className='ImgSlot'>
+      <span className='ImgSlot'>
         <div>abv: {item.abv}</div>
         <div>attenuation level: {item.attenuation_level}</div>
         <div>boil volume: {item.boil_volume.value} {item.boil_volume.unit}</div>
@@ -25,22 +25,22 @@ const CreateItems = (Beers) =>{
         <div>ebc: {item.ebc}</div>
         <div>first brewed: {item.first_brewed}</div>
         <div>id: {item.id}</div>
-        </span></center>
-      <center><span className='ItemNameSlot'>{item.name}</span></center>
+        </span>
+      <span className='ItemNameSlot'>{item.name}</span>
 
-      <center><span><button onClick={function(e) {
+      <span ><button onClick={function(e) {
     dispatch(delmoreInfo())          
-  }} className="btn btn-dark">more</button></span></center>
+  }} className="btn btn-dark buttonMore">more</button></span>
       </li>
         )
       }else{
         return(
           <li className='Item' key={item.id}>
-      <center><span className='ImgSlot'><img src={item.image_url}></img></span></center>
-      <center><span className='ItemNameSlot'>{item.name}</span></center>
-      <center><span><button onClick={function(e) {
+      <span className='ImgSlot'><img src={item.image_url}></img></span>
+      <span className='ItemNameSlot'>{item.name}</span>
+      <span><button onClick={function(e) {
     dispatch(moreInfo(item.id))          
-  }} className="btn btn-dark">more</button></span></center>
+  }} className="btn btn-dark buttonMore">more</button></span>
       </li>
         )
       }
