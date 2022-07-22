@@ -5,7 +5,7 @@
 }
 .Item{
     margin: 20px;
-    width: 500px;
+    width: 450px;
     height: 500px;
     display:inline-block;
     position:relative;
@@ -16,16 +16,19 @@
 #text{
     display: flex;
     position: relative;
-    bottom: 10px;
+    bottom: 40px;
 }
 
 .ImgSlot{
+    padding-top: 20px;
     width: 400px;
-    height: 400px;
+    height: 370px;
     margin: 10px auto 20px;
     display: block;
 }
 
 .ItemNameSlot{
     align-items:center;
+    font-weight:700;
+    font-size: 24px;
 }

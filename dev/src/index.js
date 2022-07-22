@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import store from './app/store'
 import { Provider } from 'react-redux'
+import "./app/app.css"
 
 import {Counter} from "./features/counter/Counter"
 
@@ -14,9 +15,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <Provider store={store}>
+    <div className='block'>
     <SearchForm/>
     <ItemsPage/>
     <Futter/>
+    </div>
   </Provider>
   </React.StrictMode>
 );
