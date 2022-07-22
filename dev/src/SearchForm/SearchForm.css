@@ -1,6 +1,49 @@
 .ItemSearch{
+    margin: auto;
+    width: 100%;
     margin-top: 20px;
     max-width: 50%;
     max-height: 1100px;
-    height: 70%
+    height: 90%
+}
+.d-flex{
+    margin: auto;
+    
+}
+.form-control{
+    height: 50px;
+   width: 50%;
+    
+}
+
+.Logo{
+    display: flex;
+    max-width: 30%;
+    top: 20px;
+    left: 50px;
+    display: flex;
+}
+
+.Logo a {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+.FlexHeader{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 100%;
+    display: flex;
+    position:relative;
+
+}
+
+.btn{
+    margin: 3px;
+}
+
+.buttonMore{
+    border-bottom: 20px;
+    margin: auto;
 }

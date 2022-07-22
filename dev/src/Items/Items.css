@@ -40,7 +40,8 @@
 }
 
 .ItemNameSlot{
-    height: 200px;
+    margin-top: 20px;
+    height: 180px;
     align-items:center;
     text-align: center;
     font-weight:700;

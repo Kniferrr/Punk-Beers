@@ -28,14 +28,16 @@ function SearchForm() {
       }
     
   return (
-    <center>
-        <div className='ItemSearch'>
+    <div className="FlexHeader">
+      <span className='Logo'><a href='/'>Punk_Beer</a></span>
+        <span className='ItemSearch'>
+        
     <form className='d-flex' onSubmit={onSubmit}>
                 <input type="text" className='form-control'  placeholder="neds"  onChange={onLableChange} value={ lable }/>
                 <button className='btn btn-outline-secondary'>  Search </button>
             </form>
+    </span>
     </div>
-    </center>
   )
 }
 
