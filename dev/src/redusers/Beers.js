@@ -5,6 +5,7 @@ export const Beers = createSlice({
   initialState: {
     page: 1,
     items: [],
+    favoritesitems: [],
     more: 0,
   },
   reducers: {
@@ -32,10 +33,23 @@ export const Beers = createSlice({
 delmoreInfo: (state) => {
   state.more = 0;
 },
+favorites: (state,idx) => {
+
+  const myItem = state.items.find((item) => item.id === idx.payload);
+  console.log(myItem)
+  
+  
+
+    state.favoritesitems+=myItem;
+  
+
+  console.log("items")
+  console.log(state.favoritesitems)
+},
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo } = Beers.actions
+export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites } = Beers.actions
 
 export default Beers.reducer

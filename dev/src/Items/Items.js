@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import "./Items.css"
-import {moreInfo,delmoreInfo} from "../redusers/Beers"
+import {moreInfo,delmoreInfo,favorites,defavorites} from "../redusers/Beers"
 
 
 
@@ -31,6 +31,9 @@ const CreateItems = (Beers) =>{
       <span ><button onClick={function(e) {
     dispatch(delmoreInfo())          
   }} className="btn btn-dark buttonMore">more</button></span>
+  <span><button onClick={function(e) {
+    dispatch(defavorites())          
+  }} className="btn btn-dark buttonfavorites">favorites</button></span>
       </li>
         )
       }else{
@@ -41,6 +44,9 @@ const CreateItems = (Beers) =>{
       <span><button onClick={function(e) {
     dispatch(moreInfo(item.id))          
   }} className="btn btn-dark buttonMore">more</button></span>
+  <span><button onClick={function(e) {
+    dispatch(favorites(item.id))          
+  }} className="btn btn-dark buttonfavorites">favorites</button></span>
       </li>
         )
       }
