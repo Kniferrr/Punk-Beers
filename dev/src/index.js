@@ -16,6 +16,7 @@ root.render(
   <React.StrictMode>
   <Provider store={store}>
     <div className='block'>
+    
     <SearchForm/>
     <ItemsPage/>
     <Futter/>

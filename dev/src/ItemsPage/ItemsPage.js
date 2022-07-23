@@ -27,7 +27,7 @@ export function ItemsPage() {
   
 
   return (
-    <div>
+    <div className='blockCenter'>
      <Items/>
     </div>
   )
