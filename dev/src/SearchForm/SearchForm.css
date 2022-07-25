@@ -36,7 +36,13 @@
     width: 100%;
     display: flex;
     position:relative;
+    max-width: 1400px;
 
+}
+
+.btnfavorite{
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .btn{

@@ -4,6 +4,9 @@ import reportWebVitals from './reportWebVitals';
 import store from './app/store'
 import { Provider } from 'react-redux'
 import "./app/app.css"
+import Router from './Router/Router';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 
 import {Counter} from "./features/counter/Counter"
 
@@ -13,16 +16,19 @@ import SearchForm from './SearchForm/SearchForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <BrowserRouter>
   <React.StrictMode>
   <Provider store={store}>
     <div className='block'>
-    
     <SearchForm/>
-    <ItemsPage/>
+
+    <Router/>
+    
     <Futter/>
     </div>
   </Provider>
   </React.StrictMode>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
