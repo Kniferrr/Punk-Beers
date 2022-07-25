@@ -3,7 +3,8 @@ import "./SearchForm.css"
 import { useSelector, useDispatch } from 'react-redux'
 import {Submit,LableChange} from "../redusers/Form"
 import punkBeersSerwises from "../serwises/punkBeersSerwises"
-import {takeItems} from "../redusers/Beers"
+import {takeItems,setFavoriteItemMod} from "../redusers/Beers"
+import { Link } from 'react-router-dom'
 
 function SearchForm() {
     const dispatch = useDispatch();
@@ -37,6 +38,7 @@ function SearchForm() {
                 <button className='btn btn-outline-secondary'>  Search </button>
             </form>
     </span>
+    <button className='btn btn-dark ' ><Link to='/favoirite' className='btnfavorite'>Favorite</Link></button>
     </div>
   )
 }

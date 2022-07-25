@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const Beers = createSlice({
   name: 'Beers',
   initialState: {
+    mod: "items",
     page: 1,
     items: [],
     favoritesitems: [],
@@ -34,22 +35,24 @@ delmoreInfo: (state) => {
   state.more = 0;
 },
 favorites: (state,idx) => {
-
-  const myItem = state.items.find((item) => item.id === idx.payload);
-  console.log(myItem)
-  
+  const myItem = state.items.find((el)=> el.id === idx.payload) //
   
 
-    state.favoritesitems+=myItem;
+  const status = state.favoritesitems.find((el)=> el.id === myItem.id)
   
 
-  console.log("items")
-  console.log(state.favoritesitems)
+  if(status === undefined){
+    state.favoritesitems.push(myItem);
+  }
+  console.log(state.favoritesitems.length)
+},
+setFavoriteItemMod: (state) => {
+  
 },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites } = Beers.actions
+export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites,setFavoriteItemMod } = Beers.actions
 
 export default Beers.reducer
