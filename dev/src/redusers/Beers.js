@@ -46,13 +46,10 @@ favorites: (state,idx) => {
   }
   console.log(state.favoritesitems.length)
 },
-setFavoriteItemMod: (state) => {
-  
-},
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites,setFavoriteItemMod } = Beers.actions
+export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites, } = Beers.actions
 
 export default Beers.reducer
