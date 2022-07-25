@@ -1,10 +1,9 @@
 .ItemSearch{
     margin: auto;
-    width: 100%;
     margin-top: 20px;
-    max-width: 50%;
+    width: 30%;
     max-height: 1100px;
-    height: 90%
+    
 }
 .d-flex{
     margin: auto;
@@ -12,7 +11,7 @@
 }
 .form-control{
     height: 50px;
-   width: 50%;
+   width: 100%;
     
 }
 

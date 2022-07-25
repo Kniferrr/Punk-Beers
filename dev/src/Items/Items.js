@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import "./Items.css"
 import {moreInfo,delmoreInfo,favorites,defavorites} from "../redusers/Beers"
-import { Link } from 'react-router-dom'
 
 
 
@@ -45,7 +44,7 @@ const CreateItems = (Beers) =>{
       <span><button onClick={function(e) {
     dispatch(moreInfo(item.id))          
   }} className="btn btn-dark buttonMore">more</button></span>
-  <span><Link to="favoriteitems"/><button onClick={function(e) {
+  <span><button onClick={function(e) {
     dispatch(favorites(item.id))          
   }} className="btn btn-dark buttonfavorites">favorites</button></span>
       </li>

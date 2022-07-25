@@ -46,10 +46,13 @@ favorites: (state,idx) => {
   }
   console.log(state.favoritesitems.length)
 },
+delfavorites: (state,idx) => {
+  state.favoritesitems = state.favoritesitems.filter((el)=>el.id !== idx.payload)
+},
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites, } = Beers.actions
+export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites, delfavorites} = Beers.actions
 
 export default Beers.reducer
