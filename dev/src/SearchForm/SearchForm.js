@@ -30,7 +30,7 @@ function SearchForm() {
     
   return (
     <div className="FlexHeader">
-      <span className='Logo'><a href='/'>Punk_Beer</a></span>
+      <span className='Logo'><Link to='/Punk-Beers' className='btnfavorite'>Punk_Beer</Link></span>
         <span className='ItemSearch'>
         
     <form className='d-flex' onSubmit={onSubmit}>
