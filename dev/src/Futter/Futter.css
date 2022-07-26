@@ -1,5 +1,7 @@
 .NextBack{
     display: flex;
+    bottom: 10px;
+    margin-left: 50px;
 }
 .navKeyFut{
     padding: 20px;

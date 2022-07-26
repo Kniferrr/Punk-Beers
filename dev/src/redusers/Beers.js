@@ -6,6 +6,7 @@ export const Beers = createSlice({
     mod: "items",
     page: 1,
     items: [],
+    seachitems: [],
     favoritesitems: [],
     more: 0,
   },
@@ -17,6 +18,15 @@ export const Beers = createSlice({
       // immutable state based off those changes
       
         state.items = beers.payload;
+    },
+    takeSeachItems: (state,beers) => {
+      // Redux Toolkit allows us to write "mutating" logic in reducers. It
+      // doesn't actually mutate the state because it uses the Immer library,
+      // which detects changes to a "draft state" and produces a brand new
+      // immutable state based off those changes
+      
+        state.seachitems = beers.payload;
+        console.log(beers.payload)
     },
     nextPage: (state) => {
         state.page += 1;
@@ -53,6 +63,6 @@ delfavorites: (state,idx) => {
 })
 
 // Action creators are generated for each case reducer function
-export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites, delfavorites} = Beers.actions
+export const { takeItems, nextPage,beackPage,moreInfo,delmoreInfo,favorites,defavorites, delfavorites,takeSeachItems} = Beers.actions
 
 export default Beers.reducer

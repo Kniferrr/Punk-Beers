@@ -3,11 +3,13 @@ import "./SearchForm.css"
 import { useSelector, useDispatch } from 'react-redux'
 import {Submit,LableChange} from "../redusers/Form"
 import punkBeersSerwises from "../serwises/punkBeersSerwises"
-import {takeItems,setFavoriteItemMod} from "../redusers/Beers"
-import { Link } from 'react-router-dom'
+import {takeItems,setFavoriteItemMod,takeSeachItems} from "../redusers/Beers"
+import { Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function SearchForm() {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const lable = useSelector((state) => state.Form.lable);
     const BeersSerwises = new punkBeersSerwises();
     const Beers = useSelector((state) => state.Beers.items)
@@ -17,7 +19,8 @@ function SearchForm() {
         BeersSerwises
     .getAllBeers(`/beers?beer_name=${lable}`) 
     .then((beers) => {
-        dispatch(takeItems(beers))
+      navigate('/search');
+        dispatch(takeSeachItems(beers))
         })
         .catch();
         
@@ -33,12 +36,12 @@ function SearchForm() {
       <span className='Logo'><Link to='/Punk-Beers' className='btnfavorite'>Punk_Beer</Link></span>
         <span className='ItemSearch'>
         
-    <form className='d-flex' onSubmit={onSubmit}>
+        <form className='d-flex' onSubmit={onSubmit}>
                 <input type="text" className='form-control'  placeholder="neds"  onChange={onLableChange} value={ lable }/>
                 <button className='btn btn-outline-secondary'>  Search </button>
             </form>
     </span>
-    <button className='btn btn-dark ' ><Link to='/favoirite' className='btnfavorite'>Favorite</Link></button>
+    <Link to='/favoirite' className='btnfavorite'><button className='btn btn-dark btnfavorite' >Favorite</button></Link>
     </div>
   )
 }

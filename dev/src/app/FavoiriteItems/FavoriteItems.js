@@ -7,9 +7,11 @@ import Items from '../../Items/Items';
 import { Link } from 'react-router-dom';
 import {delfavorites} from "../../redusers/Beers"
 
-export function FavoriteItems() {
-  const FavItems = useSelector((state) => state.Beers.favoritesitems)
+export function FavoriteItems(props) {
+  const {page} = props;
   const dispatch = useDispatch()
+  const FavItems = useSelector((state) => state.Beers.favoritesitems)
+  
   
   
   
